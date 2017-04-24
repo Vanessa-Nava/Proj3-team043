@@ -1,4 +1,4 @@
-<!-- Home Page -->
+<!-- Feature Overview Page -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>iCry (Home)</title>
+    <title>iCry (Features)</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../static/bootstrap.min.css" rel="stylesheet">
@@ -30,28 +30,32 @@
     <style>
       body {
         font-family: -apple-system, "Helvetica Neue", sans-serif;
-        font-weight:normal;
-        background: url("static/iCry-bg.jpg");
+        font-weight:lighter;
+        background: url("../static/iCry-bg.jpg");
         background-size:  100% 100%;
         background-repeat: no-repeat;
         background-position:top center;
         background-attachment: fixed;
+        color: white;
+      }
+      h4 {
+        text-align:left;
+        line-height: 30px;
+        font-size: 20px;
+        font-weight:lighter;
       }
       h3 {
-        font-weight:normal;
+        text-align:left;
         line-height: 30px;
         font-size: 35px;
-        color: white;
-        text-align: center;
       }
       p {
+        text-align:left;
         padding-left:5px;
         padding-right:5px;
-        font-size: 20px;
-        line-height:30px;
+        font-size: 15px;
+        line-height:20px;
         letter-spacing:.7px;
-        color: white;
-        text-align: center;
       }
       .button {
       background-color: #FFFFFF;
@@ -70,24 +74,16 @@
 
   <body>
     <div class="container">
-        <h3>Welcome to project</h3>
-        <h3 style="padding: 1px;line-height: 20px;font-size: 60px;">iCry</h3>
-        <h3 style="padding: 10px;line-height: 10px;font-size: 10px;">Inspired by Cean Manzano, Jose Crescencio, Gabriel Sanchez</h3>
+        <h4>Email: {{ values.user_email }}</h4>
+        <h4>PAST EVENT(S)</h4>
+        <p>Past Event(s): Time: 4:03pm - Changed Diaper.</p>
+        <h4>IMPORTANT!</h4>
+        <P>So we can save your entry, once you've spoken, wait a second, then press submit.</P>
+        <h4>FINISHED?</h4>
+        <p>Click the END SESSION to exit the save menu and send the saved information to the email you entered in the beginning of the program.</p>
+        <h4 style="text-align:center">REMEMBER TO ALWAYS CHECK YOUR BABY!</h4>
         <br>
-        <br>
-        <p>Monitoring your baby isn’t enough. As a parent, you want to know why they are crying. With this app, you’ll be able to record the last times you’ve changed your baby’s diaper, the last time you fed them, and the initial time they have fallen asleep. So once they start crying you’ll get an idea of why your baby is crying! </p>
-        <br>
-        <p style="line-height:20px;font-size:15px;padding-left:45px;padding-right:45px">*We will send email alerts that will display the last event(s) you had with your baby before they started crying.</p>
-        <br>
-        <p style="font-size:15px;text-align:left;line-height:1px;padding-left:45px;">Receiving Email</p>
-        <form method='post'>
-          <p style=font-size:15px;color:gray;>
-          <input type = "text"
-                 name = "user_email"
-                 placeholder = "Press Enter when done"
-                 style = "width:300px">
-        </p>
-        </form>
+        <p style="text-align:center;"><a type="sumbit" class="button" href="/phone">Start Session</a></p>
     </div> <!-- /container -->
 
 
