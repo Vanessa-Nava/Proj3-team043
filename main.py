@@ -30,8 +30,8 @@ def feature(): # renders feature
     values = {'user_email': x.email} # creates a dictionary of variables
     return render_template("feature.html", values=values) # renders feature template with values passed
 
-#Driving########################################
-@app.route('/phone') # driving route
+#Phone########################################
+@app.route('/phone') # monitor phase
 def phone(): # renders interface HTML
     return render_template("interface.html")
 
