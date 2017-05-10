@@ -57,7 +57,17 @@ def thank_you(): # sets up thank you page
     server.sendmail("proj.team43@gmail.com", x.email, msg) # sends to specified user email
     server.quit() # ends server access
     return render_template("thank_you.html", user_email=x.email) # renders thank you template
-
+    
+# @app.route('/twilio')
+# def send_msg():
+    # account_sid = "AC8a495350c7f9c0655ca72f93a70eae5b"
+    # auth_token = "5cdf40662be1da758c675e5badde473f"
+    # client = TwilioRestClient(account_sid, auth_token)
+    # # replace "to" and "from_" with real numbers
+    # rv = client.messages.create(to="+18319179997",
+    # from_="+18312010701",
+    # body="CSSIx is the best!")
+    # self.response.write(str(rv))
 #Checking if run from user######################
 if __name__ == '__main__':
     app.run(
