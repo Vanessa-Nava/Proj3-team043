@@ -1,4 +1,3 @@
-#Inspired by Cean Manzano, Jose Crescencio, Gabriel Sanchez
 
 # main py file to run flask
 from flask import Flask, render_template, request, redirect, url_for # imports libraries for flask web development
@@ -68,6 +67,7 @@ def thank_you(): # sets up thank you page
     # from_="+18312010701",
     # body="CSSIx is the best!")
     # self.response.write(str(rv))
+    
 #Checking if run from user######################
 if __name__ == '__main__':
     app.run(
