@@ -1,3 +1,4 @@
+#looked up resources
 import wave
 import numpy as np 
 import soundfile as sf
@@ -9,12 +10,12 @@ import matplotlib.pyplot as plt
 
 #1,000 to 5,000 Hz average is 3,500Hz
 
-wave_file= wave.open("iCry (1).wav")
-rate, sound= sf.read("iCry (1).wav")
-sf.write('new_file.wav',rate, sound)
+wave_file= wave.open("iCry (1).wav") #open wave file
+rate, sound= sf.read("iCry (1).wav") #read in rate and sound using sounfile
+sf.write('new_file.wav',rate, sound) #write in a new wav file
 
-print(sound)
-print (rate)
+print(sound) #gives the sample rate in Hz
+print (rate) #gives all the frequencies
 
 framerate= wave_file.getframerate()
 frames= wave_file.getnframes()
@@ -24,19 +25,6 @@ print("sampling rate: ", framerate, "Hz")
 print("length: ", frames, "samples")
 print("sample width: ", width, "bytes")
 
-'''Fs=4800
-y = np.zeros(Fs)
-#looking for zeros in the sound variable, which is also the same as Fs
-#linspace is assosiated with numpy
-x1 = np.linspace(0, 10, Fs, endpoint=True)
-x2 = np.linspace(0, 10, Fs, endpoint=False)
-plt.plot(x1, y, 'o')
-plt.plot(x2, y + 0.5, 'o')
-
-plt.ylim([-0.5, 1])
-(-0.5, 1)
-plt.show()'''
- 
 
 #getting the data to calculate the time of sound
 t= np.arange(len(rate))/float(sound)
@@ -51,8 +39,9 @@ plt.savefig('plot.png', dpi=100)
 plt.show()
 
 #highest point of the frequency is 8.3
-#for i in range(rate):
-    #if i==8.3:
+for i in range(rate):
+    if i==8.3:
         #then functionality of erick's code
-#else :
+else :
     #print "No new Changes"
+    
