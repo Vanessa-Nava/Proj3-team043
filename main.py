@@ -14,6 +14,11 @@ class User_info(): # globally saved variables
 
 x = User_info() # sets the info class to the variable x
 
+#Camera#########################################
+@app.route('/camera')
+def camera():
+    return render_template("camera.html")
+
 #Homepage#######################################
 @app.route('/') # homepage route
 def home():

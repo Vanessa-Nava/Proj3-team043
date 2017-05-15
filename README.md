@@ -1,11 +1,7 @@
 Name of Project: iCry
-
 Team Members: Vanessa Nava, Genesis Valdez, Erick Acedo
-
 Class: CST 205
-
 Link to GitHub repo: https://github.com/Vanessa-Nava/Proj3-team043.git
-
 TA: Samuel
 
 Explanation: Many times when a baby cries the parent or caregiver has no idea why the baby is crying. Parents are tired and can't remember the actions they took with the baby. For example, 
