@@ -4,6 +4,7 @@
 		<title>iCry Camera</title></title>
 	</head>
 	<body>
+		<!--Setiing up what the user will see -->
 		<h1 style = "color: red">Camera is recording...</h1>
 		
 		<video id="video" autoplay width = "600" height ="460"></video>
@@ -13,32 +14,38 @@
 		<button onclick= "save();">Save</button>
 		
 		<script type="text/javascript">
-
+			
+			#creating variables using getUserMedia() documentation
 			var video = document.getElementById('video');
 			var canvas = document.getElementById('canvas');
 			var context = canvas.getContext('2d');
 			var streaming = '';
-
+			
+			#Checking the existing if .getUserMedia()
 			navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.oGetUserMedia || navigator.msGetUserMedia;
-
+			
+			#checking if the user is giving access to the webcam
 			if(navigator.getUserMedia){
 				navigator.getUserMedia({video:true}, streamWebCam, throwError);
 			}
-
+			
+			#camera is starting to stream 
 			function streamWebCam (stream) {
 				video.src = window.URL.createObjectURL(stream);
 				video.play();
 			}
-
+			#if camera is not supportive or if user chooses not to give access to the camera
+			#error will show up
 			function throwError (e) {
 				alert(e.name);
 			}
-
+			#function that allows you to take a screenshot
 			function snap () {
 				canvas.width = video.clientWidth;
 				canvas.height = video.clientHeight;
 				context.drawImage(video, 0, 0);
 			}
+			#function that triggers the stop button to stop the stream
 			function stop() {
 				video.src ='';
 				streaming.stop();
