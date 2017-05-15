@@ -24,8 +24,10 @@ print("sampling rate: ", framerate, "Hz")
 print("length: ", frames, "samples")
 print("sample width: ", width, "bytes")
 
-Fs=4800
+'''Fs=4800
 y = np.zeros(Fs)
+#looking for zeros in the sound variable, which is also the same as Fs
+#linspace is assosiated with numpy
 x1 = np.linspace(0, 10, Fs, endpoint=True)
 x2 = np.linspace(0, 10, Fs, endpoint=False)
 plt.plot(x1, y, 'o')
@@ -33,7 +35,7 @@ plt.plot(x2, y + 0.5, 'o')
 
 plt.ylim([-0.5, 1])
 (-0.5, 1)
-plt.show()
+plt.show()'''
  
 
 #getting the data to calculate the time of sound
@@ -48,11 +50,9 @@ plt.ylabel("amplitude")
 plt.savefig('plot.png', dpi=100)
 plt.show()
 
-
-
-'''byteList = np.fromstring(wave_file.readframes(frames), dtype = np.int16)
-byteList.astype(float)
-maximum = max(byteList)
-minimum = min(byteList)
-highest_point =((abs(maximum) + abs(int(minimum))/2)
-print("maximum occurs:", highest_point)'''
+#highest point of the frequency is 8.3
+#for i in range(rate):
+    #if i==8.3:
+        #then functionality of erick's code
+#else :
+    #print "No new Changes"
